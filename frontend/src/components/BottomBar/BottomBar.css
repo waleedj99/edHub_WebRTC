@@ -1,0 +1,251 @@
+.bottombar{
+    overflow: hidden;
+    position: fixed;
+  bottom: -67px;
+  background-color: #F2D8D5;
+  height: 70px;
+  width: 100%;
+  transition: 0.3s;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;    
+  z-index: 9999;
+
+}
+.bb-divhover{
+  width: 100%;
+  height:20px;
+  background-color: aqua;
+}
+.bottombarup{
+  overflow: hidden;
+  position: fixed;
+background-color: #F2D8D5;
+height: 70px;
+width: 100%;
+transition: 0.3s;
+
+display: flex;
+align-items: center;
+justify-content: space-between;    
+z-index: 9999;
+  bottom: 0;
+}
+.bb_middle{
+    display:flex;
+    width: 450px;
+    justify-content: space-between;
+
+}
+.bb_icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #733D47;
+    cursor: pointer;
+  
+}
+.bb_icon:hover{
+  color:#53262E;
+
+}
+.bb-set{
+  cursor: pointer;
+}
+.bb-set:hover{
+color: #53262E;
+}
+.bb_padding{
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+
+
+}
+.icon_1{
+    fill:#733D47;
+    width: 34px;
+    height: 34px;
+
+}
+.icon_1_dark{
+  fill:white;
+  color:white;
+  width: 34px;
+  height: 34px;
+
+}
+.icon_1:hover{
+  fill: #53262E;
+}
+
+
+.settings1 {
+    position: absolute;
+    width: 224px;
+   height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    bottom:  85px;
+    left: 25px;
+    border: none;
+    outline: none;
+    background-color:  #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .Overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+
+  .settingsoptions{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 16px;
+      color:#733D47;
+      cursor:default;
+  }
+
+  .settingsline{
+    width: 190px;
+
+    background-color: #733D47;
+
+  }
+
+
+
+  .settings2{
+    position: absolute;
+    width: 605px;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    top:  30%;
+    left: 40%;
+    border: none;
+    outline: none;
+  
+
+    background-color: #FFFFFF;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+border-radius: 15px;
+  }
+  .MemberJoin{
+    position: absolute;
+    width: 487px;
+    height: 66px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    top:  30%;
+    left: 40%;
+    border: none;
+    outline: none;
+  
+
+    background-color: #FFF4F2;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+border-radius: 15px;
+  }
+
+  .LeaveModal{
+    position: absolute;
+    width: 208px;
+    height: 154px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom:  95px;
+    right: 25px;
+    border: none;
+    outline: none;
+  
+
+    background-color: #FFF4F2;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+border-radius: 9px;
+  }
+
+  .Overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+
+  .Overlay3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+  .settings_modal2{
+
+      display: flex;
+  }
+  .settings_left{
+    width: 147px;
+    height: 395px;
+    left: 381px;
+    top: 187px;
+    
+    background: #FEFEFE;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  .settings2_option {
+    width: 147px;
+    color: #733D47;
+cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+  }
+  .settings2_option:hover{
+    background-color: rgba(242, 216, 213, 0.47);
+;
+
+
+  }
+
+  .settings2selected{
+    background: #F2D8D5;
+  }
+  .r-MemberJoin{
+    font-family: "SFProDisplay-Medium";
+    width: 445px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 27px;
+  }
+  .leavemodaldiv{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+  }

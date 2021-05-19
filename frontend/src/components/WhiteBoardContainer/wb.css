@@ -1,0 +1,399 @@
+.wb-navbar{
+    height:56px;
+    width: 100%;
+   
+    background-color:#E5E5E5 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 99999;
+}
+.wb-container{
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  
+}
+.wb-canvasboard{
+  width: 100%;
+  height: 100%;
+  border: none !important;
+  outline: none;
+}
+.pen{
+  cursor: url(./Cursors/pen.png),auto;
+
+}
+.text{
+  cursor: text;
+}
+.eraser, .elementEraser{
+  cursor: url(./Cursors/eraser.png),auto;
+}
+
+.lazer{
+  cursor:url(./Cursors/lazer.png),auto;
+}
+.shapeRectangle,.shapeLine, .shapeArrow,.shapeTriangle, .shapeCircle{
+  cursor: crosshair;
+}
+
+.cursor-color{
+  
+}
+/* css for laptop
+@media screen 
+  and (min-width: 1200px) 
+  and (max-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .wb-canvasboard{
+      min-width:  1200px;
+      background-color: aqua;
+    width: 100%;}
+}*/
+
+
+/* ----------- Retina Screens ----------- 
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .wb-canvasboard{min-width:  1200px;
+      width: 100%;}
+}
+
+
+@media screen and (min-width: 1600px)
+and (max-width: 1900px)  {
+  .wb-canvasboard{min-width:  1600px;
+    background-color: blueviolet;
+    width: 100%;}
+}
+@media screen and (min-width: 1900px) {
+  .wb-canvasboard{
+    min-width:  1900px;
+    background-color: crimson;
+    width: 100%;}
+}
+*/
+
+.l-space{
+}
+.wb-undo{
+    margin-left:30px ;
+    width: 93px;
+height: 28px;
+left: 20px;
+top: 15px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+background: #FFFFFF;
+box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+border-radius: 14px;
+cursor: pointer;
+
+}
+.wb-vl{
+    height:28px;
+    background-color:black ;
+    border: 0.5px solid #DFDFDF;
+}
+.wb-toolbar{
+    width: 545px;
+height: 40px;
+left: 411px;
+top: 7px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+background: #FFFFFF;
+cursor: pointer;
+
+border-radius: 10px;
+}
+.wb-clearscreen{
+    width: 93px;
+    height: 28px;
+    margin-right: 20px;
+    display: flex;
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    text-align: center;
+    font-size: 12px;
+
+
+color: #593636;
+
+}
+
+
+.Modal-pen {
+    position: absolute;
+    width: 116px;
+height: 40px;
+left: 548px;
+top: 60px;
+      display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border: none;
+    top: 63px;
+    left:39%;
+    outline: none;
+    z-index: 20;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+  }
+  
+  .Overlay {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: none;
+  }
+
+  
+
+.Modal-eraser {
+    position: absolute;
+    width: 167px;
+height: 83px;
+      display: flex;
+    justify-content: space-around;
+    align-items:center;
+    border: none;
+    top: 63px;
+    left:39%;
+    outline: none;
+    cursor: pointer;
+    z-index: 2000;
+
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+  }
+
+
+.Modal-text {
+    position: absolute;
+    
+  width: 300px;
+  height: 40px;
+  
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+    
+      display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    top: 63px;
+    left:39%;
+    outline: none;
+  }
+  .wb-ti{
+    display: flex;
+    width: 27px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .minicanvas{
+    background: #FFFFFF;
+border-radius: 15px;
+width: 256px;
+height: 144px;
+  }
+  .Modal-sq{
+    position: absolute;
+    width: 111px;
+height: 75px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+    top: 63px;
+    left:45%;
+    outline: none;
+  }
+  .Modal-color{
+    position: absolute;
+    width: 255px;
+height: 125px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border: none;
+    top: 63px;
+    left:55%;
+    outline: none;
+  }
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: none;
+  }
+.wb-Eraser{
+  font-family: "Segoe UI";
+font-style: normal;
+font-size: 15px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 50px;
+/* identical to box height */
+
+color: #434343;
+
+}
+.wb-Eraser > div :active{
+  
+}
+.wbur{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+.wb-erasericon{
+  margin-right: 5px;
+  fill: #747474;
+}
+.wb-icon{
+  fill: #747474;
+  margin:0px;
+padding: 0px;
+cursor: pointer;
+}
+.wb-icon-a{
+  fill: black;
+  margin:0px;
+padding: 0px;
+cursor: pointer;
+
+}
+.tooltip{
+  position: relative;
+}
+
+  .tooltip .tooltiptextdown {
+    visibility: hidden;
+    height: 23px;
+    width: min-content;  
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 9px 4px 9px;
+    font-family: "SFProDisplay-Medium";
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-top: 5px;
+    margin-left: 10px;
+
+  }
+  
+  .tooltip:hover .tooltiptextdown {
+    visibility: visible;
+    transition: 0s 0.5s;
+
+  }
+
+.wb-icon:active{
+  fill: black;
+
+}
+.wb-text-unactive{
+  min-width: 25px;
+height: 25px;
+left: 558px;
+top: 64px;
+cursor: pointer;
+background: #FAFAFA;
+border-radius: 5px;
+font-family: "Segoe UI";
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+display:flex;
+justify-content: center;
+align-items: center;
+color: #4D4D4D;
+}
+.wb-text-active{
+  min-width: 25px;
+  height: 25px;
+  left: 558px;
+  top: 64px;
+    background: #FAFAFA;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.25);
+
+  border-radius: 5px;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: #4D4D4D;
+}
+.wb-text-unactive:active{
+  min-width: 25px;
+  height: 25px;
+  left: 558px;
+  top: 64px;
+    background: #FAFAFA;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.25);
+
+  border-radius: 5px;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: #4D4D4D;
+
+}
+.wb-sq-row{
+  display: flex;
+  justify-content: space-evenly;
+  width: 111px;
+}

@@ -1,0 +1,381 @@
+.cb-outerdiv{
+    width: 100%;
+     height: calc(100% - 7px);
+    display: flex;
+    background-color: #C7A8A8;
+flex-direction: column ;
+
+}
+.cb-messagebox{
+position: relative;
+    max-width: calc(100% - 6px);
+    margin-left: 3px;
+    background-color: #ffffff;
+
+height: calc(100% - 100px);}
+
+.cb-messagebox::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.cb-selecter{
+    position: relative;
+    display: inline-block;
+}
+
+.cb-messagebox-in{
+    padding-right: 8px; 
+    padding-left: 8px;  
+    max-width: 100%;
+     overflow: scroll; overflow-x: hidden;
+height: 100%;
+     scrollbar-width: none;
+}
+
+.cb-messagebox::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.cb-textarea{
+    
+width: calc(100% - 6px);
+    margin-left: 3px;    height: 46px;
+display: flex;
+align-content: center;
+
+-moz-box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+justify-content: center;
+box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+background: #FFFFFF;
+}
+.mess-chatbubble{  
+    background-color:'#F2D8D5' ;
+    color: '#484848';
+    border-radius: '16px';
+    padding: '16px';
+    color:"#733D47";
+}
+.cb-r1{
+display:flex;
+justify-content: space-around;
+}
+.cb-r1 >p{
+    margin-top: 0.5em;
+    margin-bottom: 0em!important;
+
+}
+.cb-select{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.cb-select.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  .mess-name{
+    font-size: 17px;
+    line-height: 18px;
+    
+    color:#733D47;
+  }
+  .mess-time{
+    font-size: 10px;
+    
+        color: #EED4D1;
+      
+  }
+  .mess-chatContainer{
+    margin-top: 16px;
+    margin-bottom: 16px;
+text-align:right;
+    display: flex;
+    color: '#484848';
+    align-content: flex-start;
+  }
+  .cb-div{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      
+
+  }
+
+  .cb-chatText{
+width: 150px;
+height: 26px;
+padding-top:4px;
+
+border: none;
+outline: none;
+white-space: initial;
+word-wrap: break-word;
+resize: none;
+font-family: "SFProDisplay-Medium";
+ }
+ .cb-chatText::placeholder{
+font-size: 15px;
+    color: #959595;
+    
+    
+  
+ }
+ .mess-maxwidth{
+     max-width: 168px;
+ }
+ .mess-icone{
+     fill:#733D47;
+ }
+
+ .cb-icon-div{
+     width: 60px;
+     height: 35px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+ }
+ .green{
+     background-color: green !important;
+     display: flex;justify-content: center;
+     align-items: center;
+ }
+ .cb-icon{
+    width: 15px;
+    height: 15px;
+ }
+
+.p-div{
+flex-wrap: wrap;
+    width: 200px;
+    max-width: 232px;
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+    font-size: 15px;
+line-height: 18px;
+width: 95%;
+/* identical to box height */
+
+
+color: #733D47;
+    padding: 5px;
+    
+}
+.p-p{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+.p-image{
+    width: 32px !important;
+height: 32px;
+margin-right: 13px;
+border-radius: 50%;
+background: #F1F1F1;
+}
+.p-divicons{
+    display: flex;
+    justify-content: center;
+}
+
+ .p-outerdiv{
+     width: 200px;
+     height: 400px;
+     background-color: #BF9B9B;
+     margin-left: 10px;
+ }
+.p-full{
+    height:calc(100% - 108px);
+    max-width: calc(100% - 6px);
+    margin-left: 3px;
+    background-color: #ffffff;
+    overflow: auto;
+}
+.p-lg{
+    width:285px;
+    display: flex;
+    justify-content: space-evenly;
+
+    font-family: "SFProDisplay-Medium";
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 18px;
+
+color: #FFFFFF;
+}
+.p-lg>p{
+    cursor: pointer;
+}
+ .cb-usericons{
+     width: 100%;
+     height:58px !important;
+     overflow-x: scroll;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     background-color: #733D47;
+     
+     position: relative;
+     scrollbar-color: #733D47 #F2D8D5;
+    scrollbar-width:none;
+ }
+ .no-scrollbar {
+    scrollbar-width: none;
+}
+.custom-scrollbar.light {
+    scrollbar-color: #733D47 #BF9B9B;
+    scrollbar-width: thin;
+}
+.custom-scrollbar.dark {
+    scrollbar-color: #FFFFFF rgba(171,171,171, 0.5);;
+    scrollbar-width: thin;
+}
+ .cb-usericon{
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+    position: relative;
+    background-color: #F2D8D5;
+    margin:14px 0px 14px 12px;
+    
+  }
+  .cb-usericon-alert{
+    width: 12px;
+    height: 12px;
+    border-radius:50%;
+    top:-3px;
+    right:-3px;
+    position: absolute;
+    background-color:#EF3333;
+  }
+ .p-icon{
+     size:13px;
+ }
+ .p-hr{
+    width: 216px;
+    
+    border: 1px solid #F2D8D5;
+ }
+.p-admit{
+    width: 87px;
+height: 30px;
+
+background: #F2D8D5;
+border-radius: 6px;
+font-family: "SFProDisplay-Medium";
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 18px;
+border: none;
+outline: none;
+margin: 0;
+padding: 0;
+
+color: #733D47;
+}
+.p-admit :active{
+    width: 87px;
+    height: 30px;
+    outline:0 !important;
+border: none;
+    background: #F2D8D5;
+    border-radius: 6px;
+    font-family: "SFProDisplay-Medium";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    
+    color: #733D47;
+
+}
+.p-admit:hover{
+    background: #ECC2BE;
+    color: #53262E;
+
+
+}
+.p-wr{
+    display: flex;
+    justify-content: space-evenly;align-items: center;
+
+
+font-family: "SFProDisplay-Medium";
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+margin-top: 21px;
+margin-bottom: 5px;
+
+line-height: 18px;
+
+color: #733D47;
+
+}
+
+
+.cb-drops{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+
+    width: 222px;
+height: 258px;
+padding:15px;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+  }
+  
+  .cb-drops>  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .cb-drops > li {
+
+    font-family: "SFProDisplay-Medium";
+    font-style: normal;
+font-weight: 500;
+font-size: 15px;
+list-style-type: none;
+margin:0;
+padding :0px;
+line-height: 18px;
+
+/* identical to box height */
+
+color: #BF9B9B;
+
+
+
+  }
+  
+  .cb-drops > li:hover {
+    width: 96px;
+height: 18px;
+
+
+font-family: "SFProDisplay-Medium";
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+
+/* identical to box height */
+
+color: #733D47;
+
+
+    cursor: pointer;
+  }
+
+

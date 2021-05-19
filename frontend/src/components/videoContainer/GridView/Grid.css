@@ -1,0 +1,161 @@
+.gv-main{
+    min-height: 100vh;
+    width: 100%;
+    background-color:  black;
+    
+}
+.gv-main>h2{
+    margin-top: 0em;
+    color: #ffff;
+    padding-left: 70px;
+    padding-top: 35px;
+    font-family: "SFProDisplay-Medium";
+font-style: normal;
+font-weight: 600;
+}
+.gv-r1{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 103px;
+    margin-right: 28px; 
+
+}
+.gvr1-1{
+    display: flex;
+    font-family: "SFProDisplay-Medium";
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 18px;
+
+color: #DAD9D9;
+}
+.gvr1-1>p{
+    margin-right: 43px;
+}
+.hey{
+    width: 300px;
+    height: 500px;
+    background-color: #311515;
+}
+.fs{
+    width: 100%;
+    height:100vh;
+}
+.gvr1-2{
+    font-family: "SFProDisplay-Medium";
+font-style: normal;
+font-weight: bold;
+font-size: 15px;
+line-height: 88.51%;
+/* or 13px */
+
+text-align: center;
+
+color: #F2D8D5;
+    display:flex;
+    justify-content: space-evenly;
+    width: 270px;
+}
+.gv-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    height: 80%;
+    overflow-y: scroll;
+}
+.ninevidtry{
+    width: 500px;
+    height:600px;
+    background-color: brown;
+    margin-top: 50px;
+    margin-left:40px;
+}
+.center{
+    width: 200px;
+    height:200px;
+    background-color: aqua;
+    margin:30px;
+}
+.gt-div{
+    background-color: #61dafb;
+    width: 100px;
+    height:500px;
+  }
+  .slick-slide{
+      min-height: 500px;
+      min-width: 500px;
+      width: 100%;
+      height:100%
+  }
+  .slick-list{
+      width:500px;
+      height:500px;
+  }
+
+
+  .slides .slick-prev,
+  .slides .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+  }
+  
+  
+  .slides {
+    position: relative;
+  }
+  
+  .slides .slick-prev,
+  .slides .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index:1;
+  }
+  
+  .slides .slick-prev {
+    left: 5%;
+  }
+  
+  .slick-next {
+    right: 5%;
+    color: black !important;
+    background-color: black !important;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+      color: black;
+  }
+.GC-main{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.GC-div{
+    width:522px;
+    height:279px;
+}
+
+.div13 {
+    background-color: #61dafb;
+    height: 920px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .carousel-root{
+      width:100%;
+  }
+
+  
+  .in1 {
+    width:522px;
+    height:279px;
+    background-color: red;
+    margin: 10px;
+  }
+  

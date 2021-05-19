@@ -1,0 +1,36 @@
+
+
+.Sr_top{
+    padding-top: 40px;
+    padding-left: 30px;
+    font-family: "SFProDisplay-Medium";
+    font-size: 15px;
+    cursor: default;
+/* identical to box height */
+
+color: #733D47;
+
+
+}
+.Sr_top > li{
+    padding-left: 30px;
+   list-style: none;
+   font-family: "SFProDisplay-Light";
+}
+.settingsline2{
+    width: 404px;
+    border:0.5px solid #733D47;
+}
+
+
+.r-MemberJoin{
+    margin-bottom: 45px;
+    margin-left: 45px;
+    width: 487px;
+  height: 66px;
+  left: 443px;
+  top: 615px;
+  
+  background: black;
+  border-radius: 14px;
+  }

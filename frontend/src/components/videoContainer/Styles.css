@@ -1,0 +1,270 @@
+.Peer{
+    width: 468px;
+height: 281px;
+left: 192px;
+top: 81px;
+background: #4A4A4A;
+}
+video {
+   
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+   
+  }
+.onevid{
+    width :    80%;
+    margin-top: 20px;
+    min-width: 932px;
+
+}
+.hide{
+    display:none;
+}
+.twovid{
+    width:50%;
+    max-width: 1090px;
+    min-width: 610px;
+    
+
+
+}
+.fivevid{
+    width: 40%;
+    min-width: 507px;
+    max-width: 730px;
+   
+       
+   
+   }
+
+   .ninevid{
+    width: 30%;
+  min-width: 365px;
+       
+   
+   }
+.vidratio{
+    padding-top:calc(100%/(16/9)) ;
+    position: relative;
+
+}
+.vidcontent{
+position: absolute;
+top:1rem;
+left: 1rem;
+right: 1rem;
+bottom: 1rem;
+background: #252424;
+;
+
+}
+.Video-Container{
+    min-height: 90vh;
+    height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.Video-Container-row{
+    min-height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.novideo1{
+ 
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .novideo1 .circle{
+        min-width: 162px;
+        min-height: 162px;
+        max-width: 353px;
+        max-height: 353px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "SFProDisplay-Medium";
+        font-style: normal;
+        font-size: 60px;
+        color: #FFFFFF;
+    
+    }
+
+.novideo .circle{
+    width: 353px;
+height: 353px;
+    background-color:  #4A4A4A;
+    ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "SFProDisplay-Medium";
+    font-style: normal;
+    font-size: 144px;
+    color: #FFFFFF;
+
+}
+
+.novideo{
+    height: 100%;
+    min-width: 932px !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Vidti1{
+    position: absolute;
+    width: 90%;
+
+    margin: 0;
+    padding: 0;
+    bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    color:#FFFFFF;
+    font-size: 35px;
+   
+
+}
+
+.Vidti1 .icon1{
+    
+        fill: #ffffff;
+        width: 34px;
+        height: 34px;
+        margin: 0;
+    
+        
+}
+.vid-distance{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    align-items: center;
+}
+
+.novideo5{
+ position: relative;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.novideo5 .circle{
+    width: 102px;
+    height: 104px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "SFProDisplay-Medium";
+    font-style: normal;
+    font-size: 40px;
+    color: #FFFFFF;
+
+}
+
+.nv-flex{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    color:#FFFFFF;
+   
+}
+
+.Vidti2{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+      color:#FFFFFF;
+    font-size: 24px;
+    position: absolute;
+    bottom: 36px;
+
+   
+
+}
+.Vidti2 .icon1{
+    
+        fill: #ffffff;
+        width: 34px;
+        height: 34px;
+    
+        
+}
+
+.Vidti3{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+     color:#FFFFFF;
+    font-size: 20px;
+    bottom: 36px;    position: absolute;
+
+
+   
+
+}
+.Vidti3 .icon1{
+    
+        fill: #ffffff;
+        width: 24px;
+        height: 24px;
+    
+        
+}
+
+.Vidti4{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    
+    color:#FFFFFF;
+    font-size: 12px;
+    margin-right: 8px ;
+    position: absolute;
+    bottom:22px;
+
+
+}
+.Vidti4 .icon1{
+    
+        fill: #ffffff;
+        width: 20px;
+        height: 20px;
+     
+}
+.novid-mic-vid{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+@media  screen and (max-width: 1920px) {
+    /* insert styles here */
+    .twovid{
+        max-width: 790px;
+    }
+    .fivevid{
+        max-width: 550px;
+    }
+}

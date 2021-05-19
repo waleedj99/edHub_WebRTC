@@ -1,0 +1,155 @@
+@font-face {
+  font-family: SFProDisplay-Heavy;
+  src: url("./Assets/Fonts/SF-Pro-Display-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: SFProDisplay-Medium;
+  src: url("./Assets/Fonts/SF-Pro-Display-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: SFProDisplay-Light;
+  src: url("./Assets/Fonts/SFProDisplay-Light.ttf") format("opentype");
+}
+
+.App {
+  min-height: 100vh;
+  height: 100%;
+  font-family: "SFProDisplay-Medium";
+  /* background-color: #311515; */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.button1{
+  width: 222px;
+  height: 40px;
+left: 734px;
+top: 630px;
+background-color: #733D47;;
+/* identical to box height */
+
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+
+
+
+
+
+
+color: #F2D8D5;
+border-radius: 5px;
+outline:none;
+border: none;
+}
+
+.button2{
+  width: 83px;
+  height: 36px;
+  left: 734px;
+  top: 630px;
+  background-color:none ;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+  border: 1px solid #733D47;
+box-sizing: border-box;
+border-radius: 4px;
+  color: #733D47;;
+  border-radius: 5px;
+  outline:none;
+
+}
+.buttonred{
+  width: 144px;
+height: 39.62px;
+outline:none;
+border: none;
+font-size: 15px;
+font-family: "SFProDisplay-Medium";
+margin: 0;
+padding:0;
+background: #E71313;
+border-radius: 6px;
+color: white;
+cursor: pointer;
+}
+
+
+
+.buttonred:active{
+  width: 144px;
+height: 39.62px;
+outline:0 !important;
+border: none;
+font-size: 15px;
+font-family: "SFProDisplay-Medium";
+margin: 0;
+padding: 0;
+background: #E71313;
+border-radius: 6px;
+color: white;
+}
+.bb-set{
+  width: 100%;
+}
+
+
+.buttonred1{
+  width: 144px;
+  height: 39.62px;
+  outline:none;
+  font-size: 15px;
+  font-family: "SFProDisplay-Medium";
+  border: 1px solid #733D47;
+  margin: 0;
+  padding:0;
+  background: none;
+  border-radius: 6px;
+  color: #E71313;
+  border: 1px solid #E71313;
+box-sizing: border-box;
+cursor: pointer;
+
+border-radius: 6px;
+}
+
+.trial{
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  align-items: center;
+}

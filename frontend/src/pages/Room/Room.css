@@ -1,0 +1,132 @@
+.rightdown{
+     background-color:white;
+  width: 256px;
+height: 144px!important ;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-family: "SFProDisplay-Medium";
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 24px;
+color: #000000;
+border: 2px solid #BF9B9B;
+box-sizing: border-box;
+
+
+
+}
+.room-CP{
+  height: 50px;
+  display: flex;
+  width: 291px;
+  background: #C7A8A8;
+  justify-content: space-evenly ;
+}
+.room-selected{
+  cursor: pointer;
+  width: 100%;
+height: 100%;
+background: #733D47;
+;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+color: #FFFFFF;
+}
+.room-unselected{
+  cursor: pointer;
+  display: flex;
+justify-content: center;
+align-items: center;
+  width: 100%;
+  font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+}
+.MainScreen{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color:black;
+    display: flex;
+
+
+}
+.RoomMainDiv{
+  width: 100%;
+  height:100%;
+  transition: 0.5s height;
+}
+.RoomMainDivbig{
+
+  width: 100%;
+  height: calc(100% - 70px);
+  transition: 0.5s height;
+
+
+}
+.MSrighthidden{
+  width:0px !important;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+
+}
+
+.MSright{
+  width: 330px !important;
+  display: flex;
+  flex-direction: column;
+
+  transition: width 0.5s ;
+  
+}
+
+
+.WMSrighthidden{
+  right:-256px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 9999;
+}
+
+.WMSright{
+  position: fixed;
+  right:0px;
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.5s;
+  z-index: 9999;
+}
+
+.CP{
+  right: 30px;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ;
+}
+.ntCP{
+  right: 30px;
+  width: 100%;
+  height:calc(100% - 70px)!important;
+  transition: 0.5s ;
+}
+
+.try{
+  height: 56px;
+  width: 100%;
+  background-color: blueviolet;
+  font-size: 56px;
+}
