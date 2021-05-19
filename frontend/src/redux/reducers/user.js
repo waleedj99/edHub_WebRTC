@@ -1,5 +1,6 @@
 const initialState = {
     id: null,
+    userName: "Guest",
     canSendMic: false,
     canSendWebcam: false,
     canShareScreen: false,
@@ -18,10 +19,11 @@ const initialState = {
 const user = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_USER':
-            const { peerId } = action.payload;
+            const { userId, userName} = action.payload;
             return {
                 ...state,
-                id: peerId,
+                id: userId,
+                userName: userName
             };
         case 'SET_MEDIA_CAPABILITIES':
             {

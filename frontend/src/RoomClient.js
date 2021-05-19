@@ -66,9 +66,8 @@ const VIDEO_SVC_ENCODINGS =
 
 
 export default class RoomClient {
-    constructor(peerId) {
-        if (!peerId) throw new Error('Missing peerId');
-        this._peerId = peerId
+    constructor() {
+        this._peerId = null;
         this._startDevicesListener();
 
         this._chatHistory = {};
@@ -119,12 +118,17 @@ export default class RoomClient {
     hello() {
         logger.warn('Hello from room Client');
     }
-    async join({ name, roomId, joinVideo, joinAudio, permissions }) {
-        logger.log('join payload', name, roomId, joinVideo, joinAudio, permissions);
+    async join({ role, userName, userId, classroomId, joinVideo, joinAudio, permissions }) {
+        logger.log('join payload', role, userName, userId, classroomId, joinVideo, joinAudio, permissions);
         // console.log(name, roomId, joinVideo, joinAudio);
 
-        this._roomId = roomId;
-        this._name = name;
+        this._roomId = classroomId;
+        this._userName = userName;
+        this._peerId = userId;
+        this._role = role;
+
+
+        store.dispatch(userActions.setuser({ userId, userName }));
         // this._signalingUrl = this._getSignalingUrl(this._peerId, roomId);
         // this._signalingSocket = socketClient(this._signalingUrl, opts);
         this._signalingSocket = signalingSocket;
@@ -132,7 +136,7 @@ export default class RoomClient {
 
         // this._signalingSocket.on('connect', async () => {
         logger.log(`signaling Peer "connect" event`);
-        this._signalingSocket.emit('join', { peerId: this._peerId, roomId, permissions });
+        this._signalingSocket.emit('join', { peerId: this._peerId, roomId: this._roomId, permissions });
         // });
 
         this._signalingSocket.on('disconnect', (reason) => {
@@ -469,18 +473,18 @@ export default class RoomClient {
 
                             break;
                         }
-                        case 'lobby:peerDenied':{
-                            store.dispatch(roomActions.setRoomDenied(true));
-                            break;
-                        }
-                        case 'lobby:peerKicked':{
-                            const { peerId } = notification.data;
-    
-                            store.dispatch(
-                                lobbyPeerActions.removeLobbyPeer(peerId));
-    
-                            break;
-                        }
+                    case 'lobby:peerDenied': {
+                        store.dispatch(roomActions.setRoomDenied(true));
+                        break;
+                    }
+                    case 'lobby:peerKicked': {
+                        const { peerId } = notification.data;
+
+                        store.dispatch(
+                            lobbyPeerActions.removeLobbyPeer(peerId));
+
+                        break;
+                    }
                     case 'lobby:peerClosed':
                         {
                             const { peerId } = notification.data;

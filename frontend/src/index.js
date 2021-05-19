@@ -12,9 +12,7 @@ import RoomContext from './RoomContext';
 import * as userAction from './redux/actions/userActions'
 
 const logger = new Logger('index');
-const peerId = randomString({ length: 8 }).toLowerCase();
-const roomClient = new RoomClient(peerId);
-store.dispatch(userAction.setuser({ peerId }));
+const roomClient = new RoomClient();
 
 ReactDOM.render(
   <React.StrictMode>

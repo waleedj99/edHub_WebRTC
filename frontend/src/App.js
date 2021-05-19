@@ -21,7 +21,7 @@ function App() {
       <ThemeProvider>
       <BrowserRouter>
         <Switch>
-          <Route path="/:name/:roomId" exact component={LandingPage} />
+          <Route path="/:token" exact component={LandingPage} />
           <Route path="/modal" exact component={Modal} />
     <Route path="/trial" exact component={Trial}/>
           <Route path="/room" exact component={Room} />

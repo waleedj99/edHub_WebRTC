@@ -1,7 +1,7 @@
-export const setuser = ({ peerId }) =>
+export const setuser = ({ userId,userName }) =>
 ({
     type: 'SET_USER',
-    payload: { peerId }
+    payload: { userId, userName },
 });
 
 export const setMediaCapabilities = ({
