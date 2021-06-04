@@ -6,7 +6,7 @@ const logger = new Logger('Peer');
 
 class Peer extends EventEmitter
 {
-	constructor({ id, roomId, socket ,permissions})
+	constructor({ id, roomId, socket ,permissions,displayName})
 	{
 		logger.info('constructor() [id:"%s"]', id);
 		super();
@@ -35,7 +35,7 @@ class Peer extends EventEmitter
 
 		this._roles = [];
 
-		this._displayName = false;
+		this._displayName = displayName;
 
 		this._picture = null;
 

@@ -16,7 +16,7 @@ module.exports = {
   //mediasoup settings
   mediasoup: {
     // Number of mediasoup workers to launch.
-    numWorkers: Object.keys(os.cpus()).length - 8,
+    numWorkers: Object.keys(os.cpus()).length,
     workerSettings:
     {
       logLevel: 'warn',

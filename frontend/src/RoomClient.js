@@ -136,7 +136,7 @@ export default class RoomClient {
 
         // this._signalingSocket.on('connect', async () => {
         logger.log(`signaling Peer "connect" event`);
-        this._signalingSocket.emit('join', { peerId: this._peerId, roomId: this._roomId, permissions });
+        this._signalingSocket.emit('join', { peerId: this._peerId, roomId: this._roomId,userName: this._userName, permissions });
         // });
 
         this._signalingSocket.on('disconnect', (reason) => {
@@ -244,10 +244,10 @@ export default class RoomClient {
                         break;
                     }
                     case 'newPeer': {
-                        const { id, roles } = notification.data;
-                        logger.log(`I got you bro newPeer`, id, roles);
+                        const { id, roles ,displayName} = notification.data;
+                        logger.log(`I got you bro newPeer`, id, roles,displayName);
                         store.dispatch(
-                            peerActions.addPeer({ id, roles, consumers: [] }));
+                            peerActions.addPeer({ id,displayName, roles, consumers: [] }));
                         // TODO: sound notification
                         // this._soundNotification();
                         break;
@@ -631,7 +631,7 @@ export default class RoomClient {
 
         // store.dispatch(roomActions.setRoomState('closed'));
 
-        window.location = '/';
+        window.location = 'https://ed-hub.vercel.app/end';
     }
 
     async closeMeeting() {

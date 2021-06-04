@@ -733,6 +733,7 @@ class Room extends EventEmitter {
 
 			case 'join':
 				{
+					logger.info('new Peer join',peer);
 					// Ensure the Peer is not already joined.
 					if (peer.joined)
 						throw new Error('Peer already joined');
@@ -802,7 +803,7 @@ class Room extends EventEmitter {
 							'newPeer',
 							{
 								id: peer.id,
-								// displayName: displayName,
+								displayName: peer.displayName,
 								// picture: picture,
 								roles: peer.roles
 							}

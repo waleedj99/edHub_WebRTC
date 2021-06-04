@@ -33,9 +33,25 @@ class User extends Component {
         console.log("shuja handled")
     }
 
+    getInitialUserName = (userName)=>{
+        var initial = "XX";
+        initial = initial.split('');
+        initial[0] = userName[0];
+        for (let index = 0; index < userName.length; index++) {
+            const c = userName[index];
+            if(c === ' ' && index+1 < userName.length){
+                initial[1] = userName[index+1];
+            }
+        }
+        initial = initial.join('');
+        return initial;
+    }
+
+
     render() {
         const { webcamProducer, screenShareProducer, micProducer, user } = this.props;
         logger.log(user.micState, user.webcamState, user.screenShareState);
+        const userNameInitial = this.getInitialUserName(user.userName);
         return (
             <div id="two" className={this.props.stylename}>
                 <div className="vidratio">
@@ -69,10 +85,10 @@ class User extends Component {
                                             controls />
                                     }</span>: 
                                 <div className={this.props.novideo} >
-                                    <div className="circle"> MN </div>
+                                    <div className="circle"> {userNameInitial} </div>
                                     <div className={this.props.vidti}>
                                         <div>
-                                            Member Name
+                                            {user.userName}
                                             </div>
                                         <div className="vid-distance">
                                             {user.micState == "on" ? <MicrophoneOn className={this.props.vidti, "icon1"} /> : <MicrophoneOff className={this.props.vidti, "icon1"} />}

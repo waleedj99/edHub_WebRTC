@@ -50,7 +50,7 @@ const Notepad = (props) => {
         const element = document.getElementById('saveNotepad');
         const file = new Blob([value], { type: 'text/plain' });
         element.href = URL.createObjectURL(file);
-        element.download = "EdvoraNotes.txt";
+        element.download = "edhubNotes.txt";
         element.click();
     }
     const focusTextarea = () => {

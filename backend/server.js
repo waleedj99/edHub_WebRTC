@@ -138,9 +138,9 @@ async function runSocketIOServer() {
 
         // const { roomId, peerId } = socket.handshake.query;
         // let roomId, peerId
-        socket.on('join', ({ peerId, roomId ,permissions}) => {
+        socket.on('join', ({ peerId, roomId,userName ,permissions}) => {
             logger.warn('I came here')
-            logger.warn(roomId, peerId);
+            logger.warn(roomId, peerId,userName);
 
             // logger.warn(roomId,peerId);
             if (!roomId || !peerId) {
@@ -176,7 +176,7 @@ async function runSocketIOServer() {
                     // returning = true;
                 }
 
-                peer = new Peer({ id: peerId, roomId, socket,permissions });
+                peer = new Peer({ id: peerId, roomId, socket,permissions,displayName: userName });
 
                 peers.set(peerId, peer);
 

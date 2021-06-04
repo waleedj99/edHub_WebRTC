@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "@material-ui/core";
 import { connect } from 'react-redux';
-import { ReactComponent as VLogo } from "../Assets/Icons/Virtuoso-Logo.svg"
+import { ReactComponent as VLogo } from "../Assets/Icons/edhub_dsce.jpeg"
 import LpTeacher from "./LpTeacher"
 import LpStudent from "./LpStudent"
 import { ReactComponent as MicOn } from "../Assets/Icons/microphone.svg"
@@ -21,7 +21,7 @@ import { Fullscreen } from "@material-ui/icons";
 
 const logger = new Logger('LandingPage');
 
-const { WAITING_ROOM, PROMOTE_PEER, MODERATE_ROOM, END_MEETING, REMOVE_USER } = permissions;
+const { WAITING_ROOM, PROMOTE_PEER, MODERATE_ROOM, END_MEETING, REMOVE_USER,LOCK_MEETING } = permissions;
 
 class LandingPage extends Component {
     static contextType = ThemeContext
@@ -33,6 +33,10 @@ class LandingPage extends Component {
             mic: false,
             gotRole: false,
             permissions: [],
+            role: "", 
+            userName: "", 
+            userId: "", 
+            classroomId: "",
         }
     }
 
@@ -53,18 +57,26 @@ class LandingPage extends Component {
             logger.error('Your browser is not supported');
         }
 
+
+        const { token } = this.props.match.params;
+        const {role, userName, userId, classroomId} = this.decodeToken(token);
+
+        this.setState({
+            role : role, userName : userName, userId : userId, classroomId : classroomId,
+        })
+
         this._callGetRoleAndPermission();
 
     }
 
     _callGetRoleAndPermission = async () => {
 
-        const token = "TOKEN_FROM_FRONTEND";
-        const encryptedToken = await encrypt(token);
-        const username = "USERNAME_FROM_FRONTEND";
-        const id = "CLASSROOMID_FROM_FRONTEND";
-        const URL = `https://engine.api.edvora.me/role/webrtc?id=${id}&username=${username}&token=${encryptedToken}`;
-        logger.log(URL);
+        // const token = "TOKEN_FROM_FRONTEND";
+        // const encryptedToken = await encrypt(token);
+        // const username = "USERNAME_FROM_FRONTEND";
+        // const id = "CLASSROOMID_FROM_FRONTEND";
+        // const URL = `https://engine.api.edhub.me/role/webrtc?id=${id}&username=${username}&token=${encryptedToken}`;
+        // logger.log(URL);
 
         // get roles and permissions
         {/*} fetch(URL, {
@@ -82,10 +94,6 @@ class LandingPage extends Component {
             .catch(err => {
                 logger.error('_callGetRoleAndPermission()', err);
             });*/}
-        this.setState({
-            gotRole: true,
-            permissions: [WAITING_ROOM, PROMOTE_PEER, MODERATE_ROOM, END_MEETING, REMOVE_USER]
-        })
     }
 
     handleDemoWebcam = (webcam) => {
@@ -190,6 +198,19 @@ class LandingPage extends Component {
 
     }
 
+    setPermissions = (role) => {
+        let permissions = [];
+        if (role === "Host") {
+            permissions = [WAITING_ROOM, PROMOTE_PEER, MODERATE_ROOM, END_MEETING, REMOVE_USER,LOCK_MEETING];
+        }
+        else {
+        }
+        this.setState({
+            gotRole: true,
+            permissions: permissions
+        })
+    }
+
     decodeToken = (token) => {
         const decodeToken = atob(token);
         const params = [];
@@ -203,6 +224,9 @@ class LandingPage extends Component {
             temp += decodeToken[i];
         }
         params.push(temp);
+
+        this.setPermissions(params[0]);
+
         return {
             role: params[0],
             userName: params[1],
@@ -217,9 +241,7 @@ class LandingPage extends Component {
     render() {
         const darkmode = this.context
         const { user, roomClient, room } = this.props;
-        const { token } = this.props.match.params;
-        const { role, userName, userId, classroomId } = this.decodeToken(token);
-        const { webcam, mic, gotRole, permissions } = this.state;
+        const { webcam, mic, gotRole, permissions,role, userName, userId, classroomId} = this.state;
         logger.log('state', this.state);
         if (!room.joined) {
             return (

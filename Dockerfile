@@ -14,6 +14,7 @@ WORKDIR /app/backend
 RUN npm install
 
 EXPOSE 443
+EXPOSE 40000-49999/udp
 ENV PORT=443
 
 ENV MODE=deploy

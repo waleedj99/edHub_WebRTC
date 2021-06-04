@@ -306,8 +306,10 @@ const handlefullscreen=()=>{
                 className="LeaveModal"
                 overlayClassName="Overlay3"
             >
-
-                <button className="buttonred" onClick={() => { roomClient.closeMeeting() }}> End Meeting</button>
+{user.permissions.includes(MODERATE_ROOM) && 
+    <button className="buttonred" onClick={() => { roomClient.closeMeeting() }}> End Meeting</button>
+}
+                
                 <button className="buttonred1" onClick={() => { roomClient.close() }}> Leave Meeting </button>
 
 

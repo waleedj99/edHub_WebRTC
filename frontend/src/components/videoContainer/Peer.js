@@ -23,8 +23,22 @@ class Peer extends Component {
 
     componentDidUpdate(prevProps) { }
 
+    getInitialUserName = (userName)=>{
+        var initial = "XX";
+        initial = initial.split('');
+        initial[0] = userName[0];
+        for (let index = 0; index < userName.length; index++) {
+            const c = userName[index];
+            if(c === ' ' && index+1 < userName.length){
+                initial[1] = userName[index+1];
+            }
+        }
+        initial = initial.join('');
+        return initial;
+    }
+
     render() {
-        const { micConsumer, webcamConsumer, screenShareConsumer } = this.props;
+        const { micConsumer, webcamConsumer, screenShareConsumer,peer } = this.props;
         const micState = (
             Boolean(micConsumer) &&
             !micConsumer.locallyPaused &&
@@ -42,6 +56,8 @@ class Peer extends Component {
             !screenShareConsumer.locallyPaused &&
             !screenShareConsumer.remotelyPaused
         );
+
+        const userNameInitial = this.getInitialUserName(peer.displayName);
 
         logger.log('micState, webcamState, screenShareState', micState, webcamState, screenShareState);
 
@@ -77,10 +93,10 @@ class Peer extends Component {
 
                             </span>:<div className={this.props.novideo} >
                                 <div className="circle">
-                                    MN
+                                    {userNameInitial}
                                 </div>
                                 <div className={this.props.vidti}>
-                                    <div className="vid-distance">Member Name </div>
+                                    <div className="vid-distance">{peer.displayName}</div>
                                     <div className="vid-distance">
                                         {micState ? <MicrophoneOn className={this.props.vidti, "icon1"} /> : <MicrophoneOff className={this.props.vidti, "icon1"} />}
                                         <VideoIcon className={this.props.vidti, "icon1"} />
@@ -116,7 +132,8 @@ const mapStateToProps = (state, ownProps) => {
     return {
         micConsumer: peerConsumers.find((consumer) => consumer.source === 'mic'),
         webcamConsumer: peerConsumers.find((consumer) => consumer.source === 'webcam'),
-        screenShareConsumer: peerConsumers.find((consumer) => consumer.source === 'screen')
+        screenShareConsumer: peerConsumers.find((consumer) => consumer.source === 'screen'),
+        peer: peer
     };
 };
 

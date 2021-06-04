@@ -1,4 +1,4 @@
-# Edvora-WebRTC
+# edhub-WebRTC
 
 /backend for backend server code
 /frontend for react frontend code
@@ -15,7 +15,7 @@ $ git checkout develop
 ```
 
 
-* Set up the Edvora-WebRTC server:
+* Set up the edhub-WebRTC server:
 
 ```bash
 $ cd backend
@@ -30,7 +30,7 @@ $ nano config.js
 
 **NOTE:** To be perfectly clear, "customize it for your scenario" is not something "optional". If you don't set proper values in `config.js` the application **won't work**.
 
-* Set up the Edvora-WebRTC browser app:
+* Set up the edhub-WebRTC browser app:
 
 ```bash
 $ cd frontend
