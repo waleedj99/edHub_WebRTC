@@ -9,7 +9,7 @@
 * Clone the project: (checkout to develop branch for development code)
 
 ```bash
-$ git clone https://github.com/starwispindustries/V-WebRTC.git
+$ git clone https://github.com/waleedj99/edHub_WebRTC.git
 $ cd V-WebRTC
 $ git checkout develop
 ```
